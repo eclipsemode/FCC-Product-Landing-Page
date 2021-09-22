@@ -70,6 +70,10 @@ a {
     padding: 10px;
     font-weight: 400;
 }
+.nav__link:hover {
+    color: orange;
+    transition: 0.4s;
+}
 @media (max-width: 1000px) {
     .header__menu-list {
         padding: 0 10px;
@@ -122,6 +126,11 @@ a {
     font-weight: 900;
     text-transform: uppercase;
 }
+#submit:hover {
+    background-color: orange;
+    cursor: pointer;
+    transition: 0.8s;
+}
 @media (max-width: 600px) {
     #form {
         margin-top: 100px;
@@ -171,4 +180,12 @@ a {
     .desc {
         text-align: center;
     }
+}
+
+/* ------ VIDEO ------ */
+.video__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 0 auto;
 }
