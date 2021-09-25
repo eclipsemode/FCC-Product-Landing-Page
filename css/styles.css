@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     font-family: "Lato", sans-serif;
     background-color: #eee;
-    font-size: 20px;
+    font-size: 16px;
     min-width: 350px;
     margin: 0;
     padding: 0;
@@ -105,7 +110,7 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 60px;
     max-height: 200px;
     align-items: center;
     justify-content: center;
@@ -146,7 +151,7 @@ a {
 .features {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     max-height: 125px;
 }
 .features:nth-of-type(1) {
@@ -187,5 +192,118 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 50px auto 0 auto;
+}
+
+/* ------ PRICING ------ */
+
+.pricing__container {
+    max-width: 1000px;
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pricing__container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 0;
+}
+.pricing__container-card ul {
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+.pricing__container-card ul li {
+    padding: 5px 0;
+}
+.card-title {
+    height: 49px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #ddd;
+}
+h2.card-price {
+    margin: 15px 0 15px 0;
+}
+@media (max-width: 800px) {
+    .pricing__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pricing__container-card {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .pricing__container-card:not(:first-of-type) {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 370px) {
+    .pricing__container-card {
+        width: 85%;
+    }
+}
+.select {
+    border-style: none;
+    background-color: #f1c40f;
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-weight: 400;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+}
+.select:hover {
+    cursor: pointer;
+    background: rgb(255, 180, 50);
+}
+
+/* ------ FOOTER ------ */
+.footer {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 20px 20px;
     margin: 30px auto 0 auto;
+    background-color: #ddd;
+    max-height: 81px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer__menu {
+    display: flex;
+    justify-content: flex-end;
+}
+.footer ul {
+    padding: 0;
+}
+
+.footer__list {
+    padding: 0 10px;
+    font-size: 0.8em;
+    color: black;
+}
+.footer__list a:hover {
+    color: orange;
+    transition: 0.4s;
+}
+.copyright {
+    display: block;
+    text-align: right;
+    font-size: 0.7em;
+    color: #444;
+}
+@media (max-width: 800px) {
+    .footer {
+        align-items: center;
+    }
 }
